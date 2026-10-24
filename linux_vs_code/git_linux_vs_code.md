@@ -376,7 +376,7 @@ Push your current branch to the remote repository:
 
 ```bash
 
-git push -u origin HEAD
+git push -u origin master
 
 ```
 
@@ -544,7 +544,7 @@ git add linux_vs_code/
 
 git commit -m "Add Linux and VS Code documentation"
 
-git push -u origin HEAD
+git push -u origin master
 
 ```
 
