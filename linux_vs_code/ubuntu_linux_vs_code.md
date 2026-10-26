@@ -304,3 +304,41 @@ Replace the IP address with the current address of your Ubuntu instance.
 | Test SSH connection | `ssh rishabhr136@172.28.165.22` | PowerShell |
 
 **Workflow:** Start Ubuntu → Install OpenSSH Server → Start SSH Service → Find Ubuntu IP → Test SSH → Install Remote - SSH → Connect through VS Code.
+
+To copy EVERYTHING, including hidden files
+A safer command is:
+cp -a /hig/users/mayank.kumar/. /hig/users/rishabh.raj/
+
+The -a preserves permissions, timestamps, symbolic links, etc.
+If you want to copy only the Python/DevOps setup
+For example, if the other user's folder contains:
+.py312
+
+you can do:
+cp -a /hig/users/mayank.kumar/.py312 /hig/users/rishabh.raj/
+
+Right — if your terminal is already inside /hig/users/rishabh.raj, you don't need to specify the full destination path.
+
+For example, suppose you want to copy everything from:
+/hig/users/mayank.kumar
+
+into your current rishabh.raj folder.
+Copy everything, including hidden files
+First confirm where you are:
+pwd
+
+It should show something like:
+/hig/users/rishabh.raj
+
+Then run:
+cp -a /hig/users/mayank.kumar/. .
+
+Here:
+- /hig/users/mayank.kumar/. = everything inside Mayank's folder
+- . = your current rishabh.raj folder
+- -a = preserves directories, hidden files, links, permissions, etc.
+
+There is a space, but it is important where the spaces are.
+
+The correct command is:
+cp -a /hig/users/mayank.kumar/. /hig/users/rishabh.raj/
